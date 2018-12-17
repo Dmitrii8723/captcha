@@ -1,2 +1,0 @@
-# captcha
-Created with CodeSandbox
