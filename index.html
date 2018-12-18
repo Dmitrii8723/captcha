@@ -1,47 +1,24 @@
 <html>
   <head>
-    <title>Main</title>
-    <meta charset="UTF-8" />
-    <script>
-      function onSubmit(token) {
-      		alert('thanks ' + document.getElementById('fieldfirst').value);
-      	}
-      	function validate(event){
-      		event.preventDefault();
-      		if (document.getElementById('fieldfirst').value){
-      			alert("You must add text to the required fields");
-      		}
-      		else
-      	}
-      	function onload (){
-      		var element = document.getElementById('submit');
-      		element.onclick = validate;
-      	}
-    </script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="src/index.js"></script>
   </head>
-
   <body>
-    <h1>Main</h1>
-    <div id="app">
-      <form id="main" onsubmit="submitForm()">
-        First name:<br />
-        <input type="text" id="fieldfirst" name="firstname" /> <br />
-        Last name:<br />
-        <input type="text" id="fieldlast" name="lastname" /> <br />
-        Email:<br />
-        <input type="text" id="fieldemail" name="email" /> <br />
-        <input type="submit" id="submit" name="Submit" value="Submit" />
-        <div
-          id="recaptcha"
-          class="g-recaptcha"
-          data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-          data-callback="onSubmit"
-          data-size="invisible"
-        ></div>
-      </form>
-    </div>
-
-    <script onload(); src="src/index.js"></script>
+    <form>
+      First name:<br />
+      <input type="text" id="firstname" name="firstname" /> <br />
+      Last name:<br />
+      <input type="text" id="lastname" name="lastname" /> <br />
+      Email:<br />
+      <input type="text" id="email" name="email" /> <br />
+      <input type="submit" id="submit" value="Submit" />
+      <div
+        id="recaptcha"
+        class="g-recaptcha"
+        data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+        data-callback="onSubmit"
+        data-size="invisible"
+      ></div>
+    </form>
   </body>
 </html>
