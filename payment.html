@@ -1,22 +1,34 @@
 <html>
-
-<head>
-	<title>Payment</title>
-	<meta charset="UTF-8" />
-</head>
-
-<body>
-  <h1>Payment</h1>
-	<form id="payment" onsubmit="submitForm()">
-		Name:<br>
-		<input type="text" name="name" />
-		<br> Payment Amount:<br>
-		<input type="text" name="payment" />
-		<br> Email:<br>
-		<input type="text" name="email" />
-		<br />
-		<input type="submit" name="Submit" value="Submit" />
-	</form>
-</body>
-
+  <head>
+    <title>Payment</title>
+    <meta charset="UTF-8" />
+    <script src="src/payment.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="styles/payment.css" />
+  </head>
+  <body>
+    <h1>Payment</h1>
+    <form id="payment" onsubmit="submitForm()" class="form">
+      <p>Name:</p>
+      <br />
+      <input type="text" id="name" name="name" /> <br />
+      <p>Payment Amount:</p>
+      <br />
+      <input type="text" id="payment" name="payment" /> <br />
+      <p>Email:</p>
+      <br />
+      <input type="text" id="email" name="email" /> <br /><br />
+      <input type="submit" id="submit" name="Submit" value="Submit" />
+      <div
+        id="recaptcha"
+        class="g-recaptcha"
+        data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+        data-callback="onSubmit"
+        data-size="invisible"
+      ></div>
+    </form>
+    <script>
+      onload();
+    </script>
+  </body>
 </html>

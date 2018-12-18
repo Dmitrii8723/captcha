@@ -15,10 +15,6 @@ function validate(event) {
   }
 }
 
-function onSubmit(token) {
-  alert("thanks " + document.getElementById("name").value);
-}
-
 function onload() {
   var element = document.getElementById("submit");
   element.onclick = validate;
