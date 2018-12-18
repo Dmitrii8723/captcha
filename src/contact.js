@@ -1,16 +1,12 @@
-(function() {
-  console.log("index.js");
-})();
-
 function onSubmit(token) {
-  alert("thanks " + document.getElementById("firstname").value);
+  alert("thanks " + document.getElementById("name").value);
 }
 
 function validate(event) {
   event.preventDefault();
   if (
-    !document.getElementById("firstname").value ||
-    !document.getElementById("lastname").value ||
+    !document.getElementById("name").value ||
+    !document.getElementById("message").value ||
     !document.getElementById("email").value
   ) {
     alert("You must add text to the required fields");
@@ -20,7 +16,7 @@ function validate(event) {
 }
 
 function onSubmit(token) {
-  alert("thanks " + document.getElementById("firstname").value);
+  alert("thanks " + document.getElementById("name").value);
 }
 
 function onload() {

@@ -1,0 +1,30 @@
+body {
+  background: #309cb5;
+}
+
+h1 {
+  margin-left: 20px;
+  margin-bottom: 0px;
+}
+
+.form {
+  border: 2px solid yellow;
+  padding-bottom: 20px;
+}
+
+input {
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+p {
+  font-size: 20px;
+  margin-left: 20px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+textarea {
+  margin-left: 20px;
+  margin-bottom: 0px;
+}

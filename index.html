@@ -1,24 +1,37 @@
 <html>
   <head>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="src/index.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
-    <form>
-      First name:<br />
-      <input type="text" id="firstname" name="firstname" /> <br />
-      Last name:<br />
-      <input type="text" id="lastname" name="lastname" /> <br />
-      Email:<br />
-      <input type="text" id="email" name="email" /> <br />
-      <input type="submit" id="submit" value="Submit" />
-      <div
-        id="recaptcha"
-        class="g-recaptcha"
-        data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-        data-callback="onSubmit"
-        data-size="invisible"
-      ></div>
-    </form>
+    <h1>Main</h1>
+    <div id="app" class="form">
+      <form id="main" onsubmit="submitForm()">
+        <br />
+        <p>First name:</p>
+        <br />
+        <input type="text" id="firstname" name="firstname" /> <br />
+        <br />
+        <p>Last name:</p>
+        <br />
+        <input type="text" id="lastname" name="lastname" /> <br />
+        <br />
+        <p>Email:</p>
+        <br />
+        <input type="text" id="email" name="email" /> <br /><br />
+        <input type="submit" id="submit" name="Submit" value="Submit" />
+        <div
+          id="recaptcha"
+          class="g-recaptcha"
+          data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+          data-callback="onSubmit"
+          data-size="invisible"
+        ></div>
+      </form>
+    </div>
+    <script>
+      onload();
+    </script>
   </body>
 </html>
